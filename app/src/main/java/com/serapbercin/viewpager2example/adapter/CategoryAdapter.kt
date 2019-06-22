@@ -2,6 +2,7 @@ package com.serapbercin.viewpager2example.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.serapbercin.viewpager2example.adapter.viewholder.CategoryViewHolder
 
 class CategoryAdapter : RecyclerView.Adapter<CategoryViewHolder>() {
     var list: MutableList<String> = mutableListOf()

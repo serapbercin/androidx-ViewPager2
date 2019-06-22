@@ -7,12 +7,9 @@ import android.content.Intent
 import android.view.View
 import android.widget.ListView
 import android.widget.SimpleAdapter
-import com.serapbercin.viewpager2example.views.CategoryActivity
+import com.serapbercin.viewpager2example.views.*
 import com.serapbercin.viewpager2example.views.CategoryActivity.Companion.ORIENTATION_HORIZONTAL
 import com.serapbercin.viewpager2example.views.CategoryActivity.Companion.ORIENTATION_VERTICAL
-import com.serapbercin.viewpager2example.views.InfinitiveCategoryPageActivity
-import com.serapbercin.viewpager2example.views.MultipleCategoriesPageActivity
-import com.serapbercin.viewpager2example.views.PageTransformerCategoryActivity
 
 const val ORIENTATION_TYPE = "ORIENTATION_TYPE"
 
@@ -72,6 +69,15 @@ class MainActivity : ListActivity() {
                 "title" to "Endless Scroll Page In ViewPager2",
                 "intent" to activityToIntent(
                     InfinitiveCategoryPageActivity::class.java.name
+                )
+            )
+        )
+
+        data.add(
+            mapOf(
+                "title" to "Diff Util Using In ViewPager2",
+                "intent" to activityToIntent(
+                    DiffCategoriesActivity::class.java.name
                 )
             )
         )

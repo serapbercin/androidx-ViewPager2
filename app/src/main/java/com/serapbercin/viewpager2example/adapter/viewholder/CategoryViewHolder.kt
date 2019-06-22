@@ -1,4 +1,4 @@
-package com.serapbercin.viewpager2example.adapter
+package com.serapbercin.viewpager2example.adapter.viewholder
 
 import android.view.LayoutInflater
 import android.view.View
