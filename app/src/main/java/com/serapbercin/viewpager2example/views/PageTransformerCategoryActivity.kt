@@ -24,6 +24,12 @@ class PageTransformerCategoryActivity : AppCompatActivity() {
         val adapter = CategoryAdapter()
         viewPager2.adapter = adapter
         adapter.setItem(list)
+        with(viewPager2) {
+            clipToPadding = false
+            clipChildren = false
+            offscreenPageLimit = 3
+            setPadding(90, 0, 90, 0)
+        }
 
         viewPager2.setPageTransformer(ViewPager2PageTransformation())
     }

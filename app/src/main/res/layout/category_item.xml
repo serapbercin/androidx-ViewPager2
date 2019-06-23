@@ -7,6 +7,7 @@
     android:layout_marginTop="8dp"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
+    app:cardBackgroundColor="@color/colorAccent"
     app:cardUseCompatPadding="true"
     card_view:cardCornerRadius="6dp">
 

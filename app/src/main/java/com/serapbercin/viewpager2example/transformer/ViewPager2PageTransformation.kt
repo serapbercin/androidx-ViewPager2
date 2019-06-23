@@ -7,13 +7,19 @@ class ViewPager2PageTransformation : ViewPager2.PageTransformer {
 
     override fun transformPage(page: View, position: Float) {
 
+        val absPos = Math.abs(position)
+        page.apply {
+            translationY = absPos * 5f
+            scaleX = 1f
+            scaleY = 1f
+        }
         when {
             position < -1 ->
-                page.alpha = 0f
+                page.alpha = 0.1f
             position <= 1 -> {
                 page.alpha = Math.max(0.2f, 1 - Math.abs(position))
             }
-            else -> page.alpha = 0f
+            else -> page.alpha = 0.1f
         }
     }
 }
