@@ -3,9 +3,10 @@ package com.serapbercin.viewpager2example.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.serapbercin.viewpager2example.adapter.viewholder.CategoryViewHolder
+import com.serapbercin.viewpager2example.util.Category
 
 class CategoryAdapter : RecyclerView.Adapter<CategoryViewHolder>() {
-    var list: MutableList<String> = mutableListOf()
+    var list: List<Category> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         return CategoryViewHolder(parent)
@@ -15,7 +16,7 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryViewHolder>() {
         holder.bind(list[position])
     }
 
-    fun setItem(list: MutableList<String>) {
+    fun setItem(list: List<Category>) {
         this.list = list
         notifyDataSetChanged()
     }

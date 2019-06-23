@@ -6,6 +6,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.serapbercin.viewpager2example.ORIENTATION_TYPE
 import com.serapbercin.viewpager2example.R
 import com.serapbercin.viewpager2example.adapter.CategoryAdapter
+import com.serapbercin.viewpager2example.util.DummyCategoryData.categories
 import kotlinx.android.synthetic.main.activity_main.*
 
 class CategoryActivity : AppCompatActivity() {
@@ -17,21 +18,13 @@ class CategoryActivity : AppCompatActivity() {
 
         val orientationType = intent.getStringExtra(ORIENTATION_TYPE)
 
-        val list: MutableList<String> = mutableListOf()
-
-        list.add("Zero Category")
-        list.add("First Category")
-        list.add("Second Category")
-        list.add("Third Category")
-        list.add("Fourth Category")
-
         val adapter = CategoryAdapter()
         viewPager2.adapter = adapter
 
         if (orientationType == ORIENTATION_VERTICAL) {
             viewPager2.orientation = ViewPager2.ORIENTATION_VERTICAL
         }
-        adapter.setItem(list)
+        adapter.setItem(categories)
     }
 
     companion object {

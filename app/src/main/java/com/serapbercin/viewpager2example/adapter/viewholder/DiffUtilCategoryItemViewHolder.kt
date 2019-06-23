@@ -14,6 +14,6 @@ class DiffUtilCategoryItemViewHolder constructor(itemView: View) :
             this(LayoutInflater.from(parent.context).inflate(R.layout.category_item, parent, false))
 
     fun bind(category: Category) {
-        itemView.test.text = category.name
+        itemView.categoryName.text = category.name
     }
 }

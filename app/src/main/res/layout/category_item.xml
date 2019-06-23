@@ -7,15 +7,15 @@
     android:layout_marginTop="8dp"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
-    app:cardBackgroundColor="@color/colorAccent"
+    app:cardBackgroundColor="@color/colorCategory"
     app:cardUseCompatPadding="true"
     card_view:cardCornerRadius="6dp">
 
     <TextView
-        android:id="@+id/test"
+        android:id="@+id/categoryName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="TEST" />
+        android:textColor="@color/colorText" />
 
 </androidx.cardview.widget.CardView>

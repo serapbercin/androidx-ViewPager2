@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.serapbercin.viewpager2example.R
 import com.serapbercin.viewpager2example.adapter.CategoryAdapter
 import com.serapbercin.viewpager2example.transformer.ViewPager2PageTransformation
+import com.serapbercin.viewpager2example.util.DummyCategoryData.categories
 import kotlinx.android.synthetic.main.activity_main.*
 
 class PageTransformerCategoryActivity : AppCompatActivity() {
@@ -13,17 +14,9 @@ class PageTransformerCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val list: MutableList<String> = mutableListOf()
-
-        list.add("Zero Category")
-        list.add("First Category")
-        list.add("Second Category")
-        list.add("Third Category")
-        list.add("Fourth Category")
-
         val adapter = CategoryAdapter()
         viewPager2.adapter = adapter
-        adapter.setItem(list)
+        adapter.setItem(categories)
         with(viewPager2) {
             clipToPadding = false
             clipChildren = false

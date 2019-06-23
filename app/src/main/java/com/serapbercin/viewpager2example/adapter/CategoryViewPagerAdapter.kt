@@ -12,3 +12,6 @@ class CategoryViewPagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) 
 
     override fun getItemCount(): Int = 2
 }
+
+
+

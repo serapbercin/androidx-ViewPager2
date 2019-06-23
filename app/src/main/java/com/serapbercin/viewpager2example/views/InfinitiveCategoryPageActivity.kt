@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.serapbercin.viewpager2example.R
 import com.serapbercin.viewpager2example.ViewPager2PageChangeCallback
 import com.serapbercin.viewpager2example.adapter.CategoryAdapter
+import com.serapbercin.viewpager2example.util.Category
 import kotlinx.android.synthetic.main.activity_main.*
 
 class InfinitiveCategoryPageActivity : AppCompatActivity() {
@@ -15,15 +16,15 @@ class InfinitiveCategoryPageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val list: MutableList<String> = mutableListOf()
+        val list: MutableList<Category> = mutableListOf()
 
-        list.add("Zero Category") // add an fake element to the top of the list
-        list.add("Zero Category")
-        list.add("First Category")
-        list.add("Second Category")
-        list.add("Third Category")
-        list.add("Fourth Category")
-        list.add("Fourth Category") // add an fake element to the end of the list
+        list.add(Category(1, "Zero Category")) // add an fake element to the top of the list
+        list.add(Category(2, "Zero Category"))
+        list.add(Category(3, "First Category"))
+        list.add(Category(4, "Second Category"))
+        list.add(Category(5, "Third Category"))
+        list.add(Category(6, "Fourth Category"))
+        list.add(Category(7, "Fourth Category")) // add an fake element to the end of the list
 
         val adapter = CategoryAdapter()
         viewPager2.adapter = adapter
