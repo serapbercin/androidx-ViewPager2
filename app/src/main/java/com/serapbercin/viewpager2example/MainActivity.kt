@@ -82,6 +82,16 @@ class MainActivity : ListActivity() {
             )
         )
 
+
+
+        data.add(
+            mapOf(
+                "title" to "Fragment State Adapter In ViewPager2",
+                "intent" to activityToIntent(
+                    CategoryFragmentActivity::class.java.name
+                )
+            )
+        )
         return data
     }
 
