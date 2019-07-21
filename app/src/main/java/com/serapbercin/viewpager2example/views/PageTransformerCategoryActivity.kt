@@ -7,6 +7,7 @@ import com.serapbercin.viewpager2example.adapter.CategoryAdapter
 import com.serapbercin.viewpager2example.transformer.ViewPager2PageTransformation
 import com.serapbercin.viewpager2example.util.DummyCategoryData.categories
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class PageTransformerCategoryActivity : AppCompatActivity() {
 
@@ -21,7 +22,6 @@ class PageTransformerCategoryActivity : AppCompatActivity() {
             clipToPadding = false
             clipChildren = false
             offscreenPageLimit = 3
-            setPadding(90, 0, 90, 0)
         }
 
         viewPager2.setPageTransformer(ViewPager2PageTransformation())

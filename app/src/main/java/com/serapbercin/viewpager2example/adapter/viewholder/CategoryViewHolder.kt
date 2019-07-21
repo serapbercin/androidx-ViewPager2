@@ -16,5 +16,4 @@ class CategoryViewHolder constructor(itemView: View) :
     fun bind(category: Category) {
         itemView.categoryName.text = category.name
     }
-
 }

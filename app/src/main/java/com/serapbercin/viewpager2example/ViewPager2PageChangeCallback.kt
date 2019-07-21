@@ -12,5 +12,4 @@ class ViewPager2PageChangeCallback(private val listener: (Int) -> Unit) :
             6 -> listener.invoke(1)
         }
     }
-
 }
